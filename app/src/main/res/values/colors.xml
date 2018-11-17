@@ -18,4 +18,6 @@
     <color name="verde">#1b5e20</color>
     <color name="grisclaro">#E6E6E6</color>
     <color name="grisoscuro">#CCCCCC</color>
+    <color name="orange">#FF8000</color>
+
 </resources>
