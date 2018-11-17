@@ -25,7 +25,8 @@
         </activity>
         <activity android:name=".Opciones" />
         <activity android:name=".Crear_Solicitud" />
-        <activity android:name=".recyclerSolicitudes"></activity>
+        <activity android:name=".recyclerSolicitudes" />
+        <activity android:name=".detalleSolicitud"></activity>
     </application>
 
 </manifest>
