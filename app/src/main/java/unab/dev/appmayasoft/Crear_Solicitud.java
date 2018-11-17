@@ -60,7 +60,7 @@ public class Crear_Solicitud extends AppCompatActivity {
         });
 
 
-        OkHttpClient objeto = new OkHttpClient();
+     /**   OkHttpClient objeto = new OkHttpClient();
         RequestBody formBody = new FormEncodingBuilder()
                 .add("id", "1")
                 .add("titulo", titulo.getText().toString())
@@ -94,7 +94,7 @@ public class Crear_Solicitud extends AppCompatActivity {
 
 
             }
-        });
+        });**/
     }
     }
 

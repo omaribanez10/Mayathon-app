@@ -27,8 +27,9 @@ public class Login extends AppCompatActivity {
             public void onClick(View v) {
                 if (!correo.getText().toString().trim().equalsIgnoreCase("") &&
                         !password.getText().toString().trim().equalsIgnoreCase("")) {
-                    Intent intent = new Intent(Login.this, Opciones.class);
-                    startActivity(intent);
+
+                   verificarLogin();
+
 
                 } else {
                     Toast.makeText(Login.this, "Hay campos de texto vacíos", Toast.LENGTH_SHORT).show();
@@ -36,5 +37,19 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
+
+
+    }
+    public void verificarLogin(){
+       String pass = "r";
+       String mail = "r";
+
+       if (pass.equalsIgnoreCase(password.getText().toString()) && mail.equalsIgnoreCase(correo.getText().toString())){
+           Intent intent = new Intent(Login.this, Opciones.class);
+           startActivity(intent);
+        } else{
+           Toast.makeText(getApplicationContext(),"Datos incorrectos, intententelo nuevamente",Toast.LENGTH_SHORT).show();
+       }
+
     }
 }

@@ -23,4 +23,4 @@ public class adapterSolicitudes  extends ArrayAdapter {
         return super.getView(position, convertView, parent);
     }
 }
-}
+
