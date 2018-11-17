@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">AppMayasoft</string>
+    <string name="app_name">InvestLending</string>
+    <string name="ip">http://192.168.89.127</string>
 </resources>

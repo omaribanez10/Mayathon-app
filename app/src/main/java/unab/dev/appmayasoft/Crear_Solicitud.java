@@ -3,10 +3,21 @@ package unab.dev.appmayasoft;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.squareup.okhttp.Call;
+import com.squareup.okhttp.Callback;
+import com.squareup.okhttp.FormEncodingBuilder;
+import com.squareup.okhttp.OkHttpClient;
+import com.squareup.okhttp.Request;
+import com.squareup.okhttp.RequestBody;
+import com.squareup.okhttp.Response;
+
+import java.io.IOException;
 
 public class Crear_Solicitud extends AppCompatActivity {
    EditText titulo,descripcion,monto,categoria,tiempodesembolso,porcentajeRentabilidad;
@@ -47,7 +58,44 @@ public class Crear_Solicitud extends AppCompatActivity {
                 }
             }
         });
+
+
+        OkHttpClient objeto = new OkHttpClient();
+        RequestBody formBody = new FormEncodingBuilder()
+                .add("id", "1")
+                .add("titulo", titulo.getText().toString())
+                .add("descripcion", descripcion.getText().toString())
+                .add("montoSolicitud", monto.getText().toString())
+                .add("categoriadeInversion",  categoria.getText().toString())
+                .add("valorInvertido",  "1000")
+                .add("porcentajeRentabilidad",  porcentajeRentabilidad.getText().toString())
+                .add("tiempodesembolso",  tiempodesembolso.getText().toString())
+                .build();
+
+
+        String ip = getString(R.string.ip);
+        Request request = new Request.Builder().url(ip +"").post(formBody).build();
+        Call call = objeto.newCall(request);
+        call.enqueue(new Callback() {
+            @Override
+            public void onFailure(Request request, IOException e) {
+                Log.i("error", "error en " + e);
+            }
+
+            @Override
+            public void onResponse(Response response) throws IOException {
+
+                Toast.makeText(Crear_Solicitud.this, "Su solicitud ha sido publicada", Toast.LENGTH_SHORT).show();
+
+
+
+                Intent llevar = new Intent(Crear_Solicitud.this, Opciones.class);
+                startActivity(llevar);
+
+
+            }
+        });
+    }
     }
 
 
-}
