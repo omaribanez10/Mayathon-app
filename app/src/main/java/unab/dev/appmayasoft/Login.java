@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!correo.getText().toString().trim().equalsIgnoreCase("") ||
+                if (!correo.getText().toString().trim().equalsIgnoreCase("") &&
                         !password.getText().toString().trim().equalsIgnoreCase("")) {
                     Intent intent = new Intent(Login.this, Opciones.class);
                     startActivity(intent);

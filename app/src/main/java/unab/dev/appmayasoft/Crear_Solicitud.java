@@ -29,11 +29,11 @@ public class Crear_Solicitud extends AppCompatActivity {
         crear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!titulo.getText().toString().trim().equalsIgnoreCase("") ||
-                        !descripcion.getText().toString().trim().equalsIgnoreCase("") ||
-                        !monto.getText().toString().trim().equalsIgnoreCase("") ||
-                        !categoria.getText().toString().trim().equalsIgnoreCase("") ||
-                        !tiempodesembolso.getText().toString().trim().equalsIgnoreCase("") ||
+                if (!titulo.getText().toString().trim().equalsIgnoreCase("") &&
+                        !descripcion.getText().toString().trim().equalsIgnoreCase("") &&
+                        !monto.getText().toString().trim().equalsIgnoreCase("") &&
+                        !categoria.getText().toString().trim().equalsIgnoreCase("") &&
+                        !tiempodesembolso.getText().toString().trim().equalsIgnoreCase("") &&
                         !porcentajeRentabilidad.getText().toString().trim().equalsIgnoreCase("") )
 
 

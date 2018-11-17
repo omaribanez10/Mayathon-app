@@ -33,6 +33,7 @@
                 android:textColor="@color/accent"
                 android:textSize="40dp"
                 android:text="LOGIN"
+                android:fontFamily="sans-serif"
                 android:gravity="center"
                 android:layout_marginBottom="16dp"
                 android:layout_width="match_parent"
@@ -52,7 +53,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColorHint="@color/accent"
-                    android:hint="Usuario"/>
+                    android:hint="Usuario"
+                    android:fontFamily="sans-serif"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.design.widget.TextInputLayout
@@ -69,12 +71,14 @@
                     android:textColorHint="@color/accent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="Contraseña"/>
+                    android:hint="Contraseña"
+                    android:fontFamily="sans-serif"/>
             </android.support.design.widget.TextInputLayout>
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/enviarTest"
                 android:text="Ingresar"
+                android:fontFamily="sans-serif"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/accent"
                 android:layout_width="match_parent"
