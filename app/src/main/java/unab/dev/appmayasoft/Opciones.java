@@ -25,5 +25,15 @@ public class Opciones extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        verEstado.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Opciones.this, recyclerSolicitudes.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
